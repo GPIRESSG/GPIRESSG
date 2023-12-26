@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+def criar_grafico_stock(dados):
+    # Extrair dados para o gráfico
+    empresas = list(dados.keys())
+    valores = list(dados.values())
+
+    # Criar gráfico de barras
+    plt.bar(empresas, valores, color='blue')
+    plt.xlabel('Empresas')
+    plt.ylabel('Valores de Estoque')
+    plt.title('Gráfico de Barras de Valores de Estoque')
+
+    # Mostrar o gráfico
+    plt.show()
+
+# Dados fictícios de estoque
+dados_stock = {
+    'Empresa A': 150000,
+    'Empresa B': 120000,
+    'Empresa C': 180000,
+    'Empresa D': 90000
+}
+
+# Chamar a função para criar o gráfico
+criar_grafico_stock(dados_stock)
